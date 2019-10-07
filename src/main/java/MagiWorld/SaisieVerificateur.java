@@ -47,8 +47,4 @@ public class SaisieVerificateur {
         return monNb;
     }
 
-    public int poserQuestion2(){
-        int reponse = saisie.nextInt();
-        return reponse;
-    }
 }

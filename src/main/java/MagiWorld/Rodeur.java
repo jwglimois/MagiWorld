@@ -8,6 +8,17 @@ public class Rodeur extends Personnage {
         System.out.println("Héhé, je suis le Rôdeur. Joueur "+ nJoueur + " , niveau " + niveau  + " , je possède " + vitalite+
                 " de vitalité, "+ force + " de force, " + agilite + " d'agilité, et " + intelligence + " d'intelligence !");
     }
+
+    @Override
+    public String getSortBasique() {
+        return "Tir à l'Arc";
+    }
+
+    @Override
+    public String getSortSpeciale() {
+        return "Concentration";
+    }
+
     @Override
     public void envoyerAttackBasique() {
 

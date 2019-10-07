@@ -1,24 +1,37 @@
 package MagiWorld;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class JeuLanceur {
 
-
+    /**
+     * Déclaration de l'attribut de type SaisieVerificateur
+     */
     private SaisieVerificateur saisieVerificateur = new SaisieVerificateur(System.in, System.out);
 
+    /**
+     * Getter pour récupérer l'attribut de la classe SaisieVerificateur qui permet de contrôler les saisies de l'utilisateur
+     * @return
+     */
     public SaisieVerificateur getSaisieVerificateur() {
         return saisieVerificateur;
     }
 
 
-    public void creerPersonnages(){
+    List<Personnage> tab2Joueurs = new ArrayList<>();
+
+    public List<Personnage> creerPersonnages(){
         for(int nJoueur=1; nJoueur<=2; nJoueur++){
             System.out.println("Creation du personnage du Joueur "+ nJoueur);
-            int choixPersonnage = this.choisirPersonnage();
-            this.choisirCaracteristiques(choixPersonnage, nJoueur);
-        }
 
+            //Obligation d'instancier JeuLanceur à chaque boucle. Si on utilise 'this', java ne réfère qu'à un seul objet.
+            //Ce qui pourrait créer un problème: Récupérer uniquement le dernier élément
+            JeuLanceur jeuLanceur = new JeuLanceur();
+
+            int choixPersonnage = jeuLanceur.choisirPersonnage();
+            tab2Joueurs.add(jeuLanceur.choisirCaracteristiques(choixPersonnage, nJoueur));
+        }
+        return tab2Joueurs;
     }
     public int choisirPersonnage (){
         int reponse;
@@ -36,9 +49,10 @@ public class JeuLanceur {
         return reponse;
     }
 
-    public  void choisirCaracteristiques(int choixPersonnage, int nJoueur){
+    public  Personnage choisirCaracteristiques(int choixPersonnage, int nJoueur){
         int choixNiveau, choixForce, choixAgilite, choixIntelligence;
         boolean isValid;
+        Personnage joueur;
         do{
             choixNiveau = this.getSaisieVerificateur().saisirUnNb("Niveau du personnage?");
             choixForce= this.getSaisieVerificateur().saisirUnNb("Force du personnage?");
@@ -53,11 +67,24 @@ public class JeuLanceur {
         }while(!(isValid));
 
         if(choixPersonnage == 1){
-            Personnage guerrier = new Guerrier(nJoueur, choixNiveau, choixForce, choixAgilite, choixIntelligence);
+            joueur = new Guerrier(nJoueur, choixNiveau, choixForce, choixAgilite, choixIntelligence);
         }else if(choixPersonnage ==2){
-            Personnage rodeur = new Rodeur(nJoueur, choixNiveau, choixForce, choixAgilite, choixIntelligence);
+            joueur = new Rodeur(nJoueur, choixNiveau, choixForce, choixAgilite, choixIntelligence);
         }else{
-            Personnage mage = new Mage(nJoueur, choixNiveau, choixForce, choixAgilite, choixIntelligence);
+            joueur = new Mage(nJoueur, choixNiveau, choixForce, choixAgilite, choixIntelligence);
+        }
+
+        return joueur;
+    }
+
+    public void choisirUneAction(){
+        tab2Joueurs = this.creerPersonnages();
+        int reponse;
+        for(Personnage joueur : tab2Joueurs){
+            int vitalite = joueur.getNiveau()*5;
+            System.out.print("Joueur " + joueur.getNJoueur() + "(" + vitalite + " de vitalité). ");
+            reponse = this.getSaisieVerificateur().saisirUnNb("Veuillez choisir votre action (1: Attaque Basique, 2: Attaque Spéciale)");
         }
     }
+
 }
