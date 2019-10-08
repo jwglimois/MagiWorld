@@ -31,11 +31,22 @@ public class Guerrier extends Personnage {
         adversaire.setVitalite(newVitalite);
         System.out.println("Joueur "+ attaquant.getNJoueur() + " utilise "+ attaquant.getSortBasique() + " et inflige " + attaquant.getForce() + " dommages.");
         System.out.println("Joueur "+ adversaire.getNJoueur() + " perd " + attaquant.getForce() + " points de vie");
-        System.out.println("Joueur "+ adversaire.getNJoueur() + " (" + adversaire.getVitalite() + " vitalité) ");
+        System.out.print("Joueur "+ adversaire.getNJoueur() + " (" + adversaire.getVitalite() + " vitalité) ");
     }
 
     @Override
     public void envoyerAttaqueSpeciale(Personnage attaquant, Personnage adversaire) {
+        //Adversaire perd sur sa vitalité les points = (force du joueur x 2).
+        int newVitaliteAdv = (adversaire.getNiveau()*5) - (attaquant.getForce()*2);
+        adversaire.setVitalite(newVitaliteAdv);
+
+        //Attaquant perd sur sa vitalité les points = (sa force / 2).
+        int newVitaliteAtt = (attaquant.getNiveau()*5) - (attaquant.getForce()/2);
+        attaquant.setVitalite(newVitaliteAtt);
+        System.out.println("Joueur "+ attaquant.getNJoueur() + " utilise "+ attaquant.getSortSpeciale() + " et inflige " + attaquant.getForce()*2 + " dommages.");
+        System.out.println("Joueur "+ adversaire.getNJoueur() + " perd " + attaquant.getForce()*2 + " points de vie");
+        System.out.println("Joueur "+ attaquant.getNJoueur() + " perd " + attaquant.getForce()/2 + " points de vie");
+        System.out.print("Joueur "+ adversaire.getNJoueur() + " (" + adversaire.getVitalite() + " vitalité) ");
 
     }
 }

@@ -102,7 +102,7 @@ public class JeuLanceur {
                 attaquant.envoyerAttaqueBasique(attaquant, adversaire);
             }
             if(reponse == 2){
-                System.out.println("Joueur "+ attaquant.getNJoueur() + " utilise "+ attaquant.getSortSpeciale());
+                attaquant.envoyerAttaqueSpeciale(attaquant, adversaire);
             }
 
         }while(reponse<0 && reponse>2);

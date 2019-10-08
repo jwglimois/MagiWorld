@@ -31,6 +31,23 @@ public class Rodeur extends Personnage {
 
     @Override
     public void envoyerAttaqueSpeciale(Personnage attaquant, Personnage adversaire) {
+        //Attaquant gagne son niveau divisé par 2 en agilité
+        int gain = attaquant.getNiveau()/2;
+        int newAgilite = gain + attaquant.getAgilite();
+        attaquant.setAgilite(newAgilite);
+
+        //Comme niveau = force + agilité + intelligence. Il faudrait augmenter le niveau aussi.
+        int newNiveau =  gain + attaquant.getNiveau();
+        attaquant.setNiveau(newNiveau);
+
+        // Vitalité = niveau * 5
+        int newVitalite = newNiveau*5;
+        attaquant.setVitalite(newVitalite);
+
+        System.out.println("Joueur "+ attaquant.getNJoueur() + " utilise "+ attaquant.getSortSpeciale() + " et gagne " + gain + " en agilité.");
+        System.out.print("Joueur "+ attaquant.getNJoueur() + " (" + attaquant.getVitalite() + " vitalité) ");
+        System.out.print("Joueur "+ adversaire.getNJoueur() + " (" + adversaire.getVitalite() + " vitalité) ");
+
 
     }
 }

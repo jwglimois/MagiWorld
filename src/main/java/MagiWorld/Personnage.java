@@ -13,6 +13,9 @@ public abstract class Personnage {
     private int intelligence;
     private int vitalite;
 
+    public void setNiveau(int niveau) {
+        this.niveau = niveau;
+    }
     public void setForce(int force) {
         this.force = force;
     }

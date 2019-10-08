@@ -32,6 +32,13 @@ public class Mage extends Personnage {
 
     @Override
     public void envoyerAttaqueSpeciale(Personnage attaquant, Personnage adversaire) {
+        //Attaquant gagne (son intelligence x 2) en vie
+        int gain = attaquant.getIntelligence()*2;
+        int newVitalie = gain + attaquant.getVitalite();
+        attaquant.setVitalite(newVitalie);
 
+        System.out.println("Joueur "+ attaquant.getNJoueur() + " utilise "+ attaquant.getSortSpeciale() + " et gagne " + gain + " en vitalité.");
+        System.out.print("Joueur "+ attaquant.getNJoueur() + " (" + attaquant.getVitalite() + " vitalité) ");
+        System.out.print("Joueur "+ adversaire.getNJoueur() + " (" + adversaire.getVitalite() + " vitalité) ");
     }
 }
