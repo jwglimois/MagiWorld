@@ -6,9 +6,13 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/Guerrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/Guerrier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/JeuLanceur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/JeuLanceur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/Personnage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/Personnage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/Rodeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/Rodeur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MagiWorld/Guerrier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MagiWorld/Guerrier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MagiWorld/JeuLanceur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MagiWorld/JeuLanceur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MagiWorld/Mage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MagiWorld/Mage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MagiWorld/Personnage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MagiWorld/Personnage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MagiWorld/Rodeur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MagiWorld/Rodeur.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -148,16 +152,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/MagiWorld/Guerrier.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

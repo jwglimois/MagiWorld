@@ -84,40 +84,25 @@ public class JeuLanceur {
         Personnage attaquant = null;
         Personnage adversaire = null;
         int reponse;
-        int[] tabAttaquant= new int[5];;
-        int[] tabAdversaire = new int[5];
         int nJoueur=1;
         for(Personnage joueur : tab2Joueurs){
             if(nJoueur==1){
                 attaquant = joueur;
-                tabAttaquant[0]=joueur.getNJoueur();
-                tabAttaquant[1]=joueur.getForce();
-                tabAttaquant[2]=joueur.getAgilite();
-                tabAttaquant[3]=joueur.getIntelligence();
-                //Vitalité = niveau *5
-                tabAttaquant[4]=joueur.getNiveau()*5;
             }else{
                 adversaire = joueur;
-                tabAdversaire[0]=joueur.getNJoueur();
-                tabAdversaire[1]=joueur.getForce();
-                tabAdversaire[2]=joueur.getAgilite();
-                tabAdversaire[3]=joueur.getIntelligence();
-                //Vitalité = niveau *5
-                tabAdversaire[4]=joueur.getNiveau()*5;
             }
             nJoueur++;
         }
 
         do{
-            System.out.print("Joueur " + tabAttaquant[0] + "(" + tabAttaquant[4] + " de vitalité). ");
+            System.out.print("Joueur " + attaquant.getNJoueur() + "(" + attaquant.getNiveau()*5 + " de vitalité). ");
             reponse = this.getSaisieVerificateur().saisirUnNb("Veuillez choisir votre action (1: Attaque Basique, 2: Attaque Spéciale)");
 
             if(reponse == 1){
-                System.out.println("Joueur "+ tabAttaquant[0]+ " utilise "+ attaquant.getSortBasique() + " et inflige 10 dommages.");
-                attaquant.envoyerAttacqueBasique(adversaire);
+                attaquant.envoyerAttaqueBasique(attaquant, adversaire);
             }
             if(reponse == 2){
-                System.out.println("Joueur "+ tabAttaquant[0]+ " utilise "+ attaquant.getSortSpeciale());
+                System.out.println("Joueur "+ attaquant.getNJoueur() + " utilise "+ attaquant.getSortSpeciale());
             }
 
         }while(reponse<0 && reponse>2);

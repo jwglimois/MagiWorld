@@ -20,7 +20,18 @@ public class Mage extends Personnage {
     }
 
     @Override
-    public void envoyerAttacqueBasique(Personnage adversaire) {
+    public void envoyerAttaqueBasique(Personnage attaquant, Personnage adversaire) {
+        //Adversaire perd sur sa vitalité les points égaux à l'intelligence du joueur.
+        int newVitalite = (adversaire.getNiveau()*5) - attaquant.getIntelligence();
+        adversaire.setVitalite(newVitalite);
+        System.out.println("Joueur "+ attaquant.getNJoueur() + " utilise "+ attaquant.getSortBasique() + " et inflige " + attaquant.getIntelligence() + " dommages.");
+        System.out.println("Joueur "+ adversaire.getNJoueur() + " perd " + attaquant.getIntelligence() + " points de vie");
+        System.out.println("Joueur "+ adversaire.getNJoueur() + " (" + adversaire.getVitalite() + " vitalité) ");
+
+    }
+
+    @Override
+    public void envoyerAttaqueSpeciale(Personnage attaquant, Personnage adversaire) {
 
     }
 }

@@ -25,13 +25,17 @@ public class Guerrier extends Personnage {
     }
 
     @Override
-    public void envoyerAttacqueBasique(Personnage adversaire) {
-        //Adversaire perd 10 points
-        int newVitalite = (adversaire.getNiveau()*5) - 10;
-        int newForce = adversaire.getForce() - 10;
+    public void envoyerAttaqueBasique(Personnage attaquant, Personnage adversaire) {
+        //Adversaire perd sur sa vitalité les points égaux à la force du joueur.
+        int newVitalite = (adversaire.getNiveau()*5) - attaquant.getForce();
         adversaire.setVitalite(newVitalite);
-        adversaire.setForce(newForce);
-        System.out.println("Joueur 2 perd 10 points de vie");
-        System.out.println("Joueur 2 (" + adversaire.getVitalite() + " vitalité) ");
+        System.out.println("Joueur "+ attaquant.getNJoueur() + " utilise "+ attaquant.getSortBasique() + " et inflige " + attaquant.getForce() + " dommages.");
+        System.out.println("Joueur "+ adversaire.getNJoueur() + " perd " + attaquant.getForce() + " points de vie");
+        System.out.println("Joueur "+ adversaire.getNJoueur() + " (" + adversaire.getVitalite() + " vitalité) ");
+    }
+
+    @Override
+    public void envoyerAttaqueSpeciale(Personnage attaquant, Personnage adversaire) {
+
     }
 }

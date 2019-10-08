@@ -96,5 +96,6 @@ public abstract class Personnage {
     }
 
 
-    public abstract void envoyerAttacqueBasique(Personnage adversaire);
+    public abstract void envoyerAttaqueBasique(Personnage attaquant, Personnage adversaire);
+    public abstract void envoyerAttaqueSpeciale(Personnage attaquant, Personnage adversaire);
 }
