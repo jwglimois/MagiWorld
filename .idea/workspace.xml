@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd2b466a-8752-4fc0-a909-26a7b75898e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/Guerrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/Guerrier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/JeuLanceur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/JeuLanceur.java" afterDir="false" />
@@ -10,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/Personnage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/Personnage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/Rodeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/Rodeur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/SaisieVerificateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/SaisieVerificateur.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,10 +141,23 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/MagiWorld/Guerrier.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

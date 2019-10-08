@@ -11,6 +11,30 @@ public abstract class Personnage {
     private int force;
     private int agilite;
     private int intelligence;
+    private int vitalite;
+
+    public void setForce(int force) {
+        this.force = force;
+    }
+
+    public void setAgilite(int agilite) {
+        this.agilite = agilite;
+    }
+
+    public void setIntelligence(int intelligence) {
+        this.intelligence = intelligence;
+    }
+
+    public int getVitalite() {
+        return vitalite;
+    }
+
+
+    public void setVitalite(int vitalite) {
+        this.vitalite = vitalite;
+    }
+
+
 
     public int getNJoueur() {
         return nJoueur;
@@ -63,7 +87,8 @@ public abstract class Personnage {
 
     public Personnage(){}
 
-    public Personnage(int niveau, int force, int agilite, int intelligence) {
+    public Personnage(int nJoueur, int niveau, int force, int agilite, int intelligence) {
+        this.nJoueur = nJoueur;
         this.niveau = niveau;
         this.force= force;
         this.agilite = agilite;
@@ -71,6 +96,5 @@ public abstract class Personnage {
     }
 
 
-
-    public abstract void envoyerAttackBasique();
+    public abstract void envoyerAttacqueBasique(Personnage adversaire);
 }

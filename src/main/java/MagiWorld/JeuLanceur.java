@@ -31,6 +31,7 @@ public class JeuLanceur {
             int choixPersonnage = jeuLanceur.choisirPersonnage();
             tab2Joueurs.add(jeuLanceur.choisirCaracteristiques(choixPersonnage, nJoueur));
         }
+
         return tab2Joueurs;
     }
     public int choisirPersonnage (){
@@ -50,6 +51,7 @@ public class JeuLanceur {
     }
 
     public  Personnage choisirCaracteristiques(int choixPersonnage, int nJoueur){
+
         int choixNiveau, choixForce, choixAgilite, choixIntelligence;
         boolean isValid;
         Personnage joueur;
@@ -79,12 +81,48 @@ public class JeuLanceur {
 
     public void choisirUneAction(){
         tab2Joueurs = this.creerPersonnages();
+        Personnage attaquant = null;
+        Personnage adversaire = null;
         int reponse;
+        int[] tabAttaquant= new int[5];;
+        int[] tabAdversaire = new int[5];
+        int nJoueur=1;
         for(Personnage joueur : tab2Joueurs){
-            int vitalite = joueur.getNiveau()*5;
-            System.out.print("Joueur " + joueur.getNJoueur() + "(" + vitalite + " de vitalité). ");
-            reponse = this.getSaisieVerificateur().saisirUnNb("Veuillez choisir votre action (1: Attaque Basique, 2: Attaque Spéciale)");
+            if(nJoueur==1){
+                attaquant = joueur;
+                tabAttaquant[0]=joueur.getNJoueur();
+                tabAttaquant[1]=joueur.getForce();
+                tabAttaquant[2]=joueur.getAgilite();
+                tabAttaquant[3]=joueur.getIntelligence();
+                //Vitalité = niveau *5
+                tabAttaquant[4]=joueur.getNiveau()*5;
+            }else{
+                adversaire = joueur;
+                tabAdversaire[0]=joueur.getNJoueur();
+                tabAdversaire[1]=joueur.getForce();
+                tabAdversaire[2]=joueur.getAgilite();
+                tabAdversaire[3]=joueur.getIntelligence();
+                //Vitalité = niveau *5
+                tabAdversaire[4]=joueur.getNiveau()*5;
+            }
+            nJoueur++;
         }
+
+        do{
+            System.out.print("Joueur " + tabAttaquant[0] + "(" + tabAttaquant[4] + " de vitalité). ");
+            reponse = this.getSaisieVerificateur().saisirUnNb("Veuillez choisir votre action (1: Attaque Basique, 2: Attaque Spéciale)");
+
+            if(reponse == 1){
+                System.out.println("Joueur "+ tabAttaquant[0]+ " utilise "+ attaquant.getSortBasique() + " et inflige 10 dommages.");
+                attaquant.envoyerAttacqueBasique(adversaire);
+            }
+            if(reponse == 2){
+                System.out.println("Joueur "+ tabAttaquant[0]+ " utilise "+ attaquant.getSortSpeciale());
+            }
+
+        }while(reponse<0 && reponse>2);
+
     }
 
 }
+
