@@ -127,7 +127,7 @@ public class JeuLanceur {
 
         do{
             System.out.print("Joueur " + attaquant.getNJoueur() + " (" + attaquant.getVitalite() + " de vitalité). ");
-            this.displayActions(attaquant, adversaire);
+            this.afficherActions(attaquant, adversaire);
             remplacant = attaquant;
             attaquant = adversaire;
             /*
@@ -156,7 +156,7 @@ public class JeuLanceur {
 
     }
 
-    public void displayActions(Personnage attaquant, Personnage adversaire){
+    public void afficherActions(Personnage attaquant, Personnage adversaire){
         int choixAction;
         do{
             choixAction = this.getSaisieVerificateur().saisirUnNb("Veuillez choisir votre action (1: Attaque Basique, 2: Attaque Spéciale)");
