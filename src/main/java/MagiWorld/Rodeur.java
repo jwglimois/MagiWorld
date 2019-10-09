@@ -5,7 +5,7 @@ public class Rodeur extends Personnage {
     public Rodeur(int nJoueur, int niveau, int force, int agilite, int intelligence){
         super(nJoueur, niveau, force, agilite, intelligence);
         int vitalite = 5*niveau;
-        System.out.println("Héhé, je suis le Rôdeur. Joueur "+ nJoueur + " , niveau " + niveau  + " , je possède " + vitalite+
+        System.out.println("Héhé, je suis le Rôdeur. Joueur "+ nJoueur + ", niveau " + niveau  + " , je possède " + vitalite+
                 " de vitalité, "+ force + " de force, " + agilite + " d'agilité, et " + intelligence + " d'intelligence !");
     }
 
@@ -26,12 +26,7 @@ public class Rodeur extends Personnage {
         adversaire.setVitalite(newVitalite);
         System.out.println("Joueur "+ attaquant.getNJoueur() + " utilise "+ attaquant.getSortBasique() + " et inflige " + attaquant.getAgilite() + " dommages.");
         System.out.println("Joueur "+ adversaire.getNJoueur() + " perd " + attaquant.getAgilite() + " points de vie");
-        if(attaquant.getVitalite()<0){
-            System.out.println("Joueur "+ adversaire.getNJoueur() + " a perdu.");
-        }
-        if(adversaire.getVitalite()<0){
-            System.out.println("Joueur "+ adversaire.getNJoueur() + " a perdu.");
-        }
+        this.annoncerSiPerte(attaquant, adversaire);
     }
 
     @Override
@@ -45,18 +40,9 @@ public class Rodeur extends Personnage {
         int newNiveau =  gain + attaquant.getNiveau();
         attaquant.setNiveau(newNiveau);
 
-        // Vitalité = niveau * 5
-        int newVitalite = newNiveau*5;
-        attaquant.setVitalite(newVitalite);
-
         System.out.println("Joueur "+ attaquant.getNJoueur() + " utilise "+ attaquant.getSortSpeciale() + " et gagne " + gain + " en agilité.");
         System.out.print("Joueur "+ attaquant.getNJoueur() + " (" + attaquant.getVitalite() + " vitalité) ");
-        if(attaquant.getVitalite()<0){
-            System.out.println("Joueur "+ adversaire.getNJoueur() + " a perdu.");
-        }
-        if(adversaire.getVitalite()<0){
-            System.out.println("Joueur "+ adversaire.getNJoueur() + " a perdu.");
-        }
+        this.annoncerSiPerte(attaquant, adversaire);
 
 
     }

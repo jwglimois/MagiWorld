@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd2b466a-8752-4fc0-a909-26a7b75898e6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/Guerrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/Guerrier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/JeuLanceur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/JeuLanceur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/Mage.java" afterDir="false" />

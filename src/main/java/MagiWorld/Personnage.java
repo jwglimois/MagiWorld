@@ -113,4 +113,14 @@ public abstract class Personnage {
 
     public abstract void envoyerAttaqueBasique(Personnage attaquant, Personnage adversaire);
     public abstract void envoyerAttaqueSpeciale(Personnage attaquant, Personnage adversaire);
+    public void annoncerSiPerte(Personnage attaquant, Personnage adversaire){
+        if(attaquant.getVitalite()<=0){
+            System.out.println("Joueur "+ attaquant.getNJoueur() + " est mort.");
+            System.out.println("Joueur "+ attaquant.getNJoueur() + " a perdu.");
+        }
+        if(adversaire.getVitalite()<=0){
+            System.out.println("Joueur "+ adversaire.getNJoueur() + " est mort.");
+            System.out.println("Joueur "+ adversaire.getNJoueur() + " a perdu.");
+        }
+    }
 }
