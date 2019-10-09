@@ -9,6 +9,7 @@ public class JeuLanceur {
      */
     private SaisieVerificateur saisieVerificateur = new SaisieVerificateur(System.in, System.out);
 
+
     /**
      * Getter pour récupérer l'attribut de la classe SaisieVerificateur qui permet de contrôler les saisies de l'utilisateur
      * @return
@@ -22,6 +23,7 @@ public class JeuLanceur {
      * Déclaration d'un tableau qui a pour objectif de récuperer nos joueurs: joueur et son adversaire
      */
     List<Personnage> tab2Joueurs = new ArrayList<>();
+
 
     /**
      * creerPersonnages() sert mettre les choix de Personnage dans le tableau tab2Joueurs
@@ -38,20 +40,20 @@ public class JeuLanceur {
             int choixPersonnage = jeuLanceur.choisirPersonnage();
             tab2Joueurs.add(jeuLanceur.choisirCaracteristiques(choixPersonnage, nJoueur));
         }
-
         return tab2Joueurs;
     }
 
+
     /**
-     *
-     * @return
+     * choisirPersonnage() sert à selectionner le personnage.
+     * @return La valeur de retour est un nombre entier qui représente le choix du personnage.
      */
-    public int choisirPersonnage (){
-        int reponse;
+    public int choisirPersonnage(){
+        int choixPersonnage;
         boolean isValid;
         do{
-            reponse = this.getSaisieVerificateur().saisirUnNb("Veuillez choisir la classe de votre personnage (1: Guerrier, 2: Rôdeur, 3: Mage)");
-            if(reponse>3 || reponse<0){
+            choixPersonnage = this.getSaisieVerificateur().saisirUnNb("Veuillez choisir la classe de votre personnage (1: Guerrier, 2: Rôdeur, 3: Mage)");
+            if(choixPersonnage>3 || choixPersonnage<0){
                 System.out.println("Vous devez saisir un nombre entre 1 et 3.");
                 isValid = false;
             }else{
@@ -59,9 +61,15 @@ public class JeuLanceur {
             }
         }while(!(isValid));
 
-        return reponse;
+        return choixPersonnage;
     }
 
+    /**
+     * choisirCaracteristiques() sert à selectionner les caracteristiques du personnage
+     * @param choixPersonnage
+     * @param nJoueur
+     * @return
+     */
     public  Personnage choisirCaracteristiques(int choixPersonnage, int nJoueur){
         Personnage joueur;
 
@@ -95,7 +103,8 @@ public class JeuLanceur {
             choixAgilite= this.getSaisieVerificateur().saisirUnNb("Agilité du personnage?");
             choixIntelligence= this.getSaisieVerificateur().saisirUnNb("Intelligence du personnage?");
             if(choixNiveau == choixForce + choixAgilite + choixIntelligence ){
-                isValid = true;
+                //Ici, on controle les valeurs de caractéristiques. Niveau; 1-100; Force, Agilité, Intelligence: 0-100
+                isValid = this.controllerValeurCaracteristique(choixNiveau, choixForce, choixAgilite, choixIntelligence);
             }else{
                 System.out.println("Attention! Niveau = Force + Agilite + Intelligence.");
                 isValid = false;
@@ -107,6 +116,28 @@ public class JeuLanceur {
         tabCaracteristiques[2] = choixAgilite;
         tabCaracteristiques[3] = choixIntelligence;
         return tabCaracteristiques;
+    }
+
+    public boolean controllerValeurCaracteristique(int choixNiveau, int choixForce, int choixAgilite, int choixIntelligence){
+        boolean isValid;
+        int[] tab3Choix = new int[3];
+        tab3Choix[0] = choixForce;
+        tab3Choix[1] = choixAgilite;
+        tab3Choix[2] = choixIntelligence;
+        if(choixNiveau<1 || choixNiveau>100){
+            System.out.println("Niveau doit être min 1 et max 100.");
+            return isValid = false;
+        }else{
+                int i=0;
+                while(tab3Choix[i]<=0 || tab3Choix[i]>100){
+                    System.out.println("Pour la Force, l'agilité, l'intelligence, vous devez saisir entre 0 et 100");
+                    i++;
+                    return isValid = false;
+                }
+                return isValid = true;
+        }
+
+
     }
 
     public void choisirUneAction(){

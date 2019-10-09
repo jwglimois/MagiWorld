@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd2b466a-8752-4fc0-a909-26a7b75898e6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/Guerrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/Guerrier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/JeuLanceur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/JeuLanceur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/Personnage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/Personnage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/Rodeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/Rodeur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MagiWorld/Guerrier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MagiWorld/Guerrier.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/MagiWorld/JeuLanceur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MagiWorld/JeuLanceur.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MagiWorld/Mage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MagiWorld/Mage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MagiWorld/Personnage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MagiWorld/Personnage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MagiWorld/Rodeur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MagiWorld/Rodeur.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
