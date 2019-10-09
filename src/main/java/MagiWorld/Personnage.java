@@ -12,6 +12,18 @@ public abstract class Personnage {
     private int agilite;
     private int intelligence;
     private int vitalite;
+    private int oldVitalite;
+
+    public int getOldVitalite() {
+        return oldVitalite;
+    }
+
+
+    public void setOldVitalite(int oldVitalite) {
+        this.oldVitalite = oldVitalite;
+    }
+
+
 
     public void setNiveau(int niveau) {
         this.niveau = niveau;

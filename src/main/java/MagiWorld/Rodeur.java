@@ -22,11 +22,16 @@ public class Rodeur extends Personnage {
     @Override
     public void envoyerAttaqueBasique(Personnage attaquant, Personnage adversaire) {
         //Adversaire perd sur sa vitalité les points égaux à l’agilité du joueur.
-        int newVitalite = (adversaire.getNiveau()*5) - attaquant.getAgilite();
+        int newVitalite = adversaire.getVitalite() - attaquant.getAgilite();
         adversaire.setVitalite(newVitalite);
         System.out.println("Joueur "+ attaquant.getNJoueur() + " utilise "+ attaquant.getSortBasique() + " et inflige " + attaquant.getAgilite() + " dommages.");
         System.out.println("Joueur "+ adversaire.getNJoueur() + " perd " + attaquant.getAgilite() + " points de vie");
-        System.out.println("Joueur "+ adversaire.getNJoueur() + " (" + adversaire.getVitalite() + " vitalité) ");
+        if(attaquant.getVitalite()<0){
+            System.out.println("Joueur "+ adversaire.getNJoueur() + " a perdu.");
+        }
+        if(adversaire.getVitalite()<0){
+            System.out.println("Joueur "+ adversaire.getNJoueur() + " a perdu.");
+        }
     }
 
     @Override
@@ -46,7 +51,12 @@ public class Rodeur extends Personnage {
 
         System.out.println("Joueur "+ attaquant.getNJoueur() + " utilise "+ attaquant.getSortSpeciale() + " et gagne " + gain + " en agilité.");
         System.out.print("Joueur "+ attaquant.getNJoueur() + " (" + attaquant.getVitalite() + " vitalité) ");
-        System.out.print("Joueur "+ adversaire.getNJoueur() + " (" + adversaire.getVitalite() + " vitalité) ");
+        if(attaquant.getVitalite()<0){
+            System.out.println("Joueur "+ adversaire.getNJoueur() + " a perdu.");
+        }
+        if(adversaire.getVitalite()<0){
+            System.out.println("Joueur "+ adversaire.getNJoueur() + " a perdu.");
+        }
 
 
     }

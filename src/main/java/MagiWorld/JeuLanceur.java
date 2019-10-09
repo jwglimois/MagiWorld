@@ -70,10 +70,16 @@ public class JeuLanceur {
 
         if(choixPersonnage == 1){
             joueur = new Guerrier(nJoueur, choixNiveau, choixForce, choixAgilite, choixIntelligence);
+            joueur.setOldVitalite(choixNiveau*5);
+            joueur.setVitalite(choixNiveau*5);
         }else if(choixPersonnage ==2){
             joueur = new Rodeur(nJoueur, choixNiveau, choixForce, choixAgilite, choixIntelligence);
+            joueur.setOldVitalite(choixNiveau*5);
+            joueur.setVitalite(choixNiveau*5);
         }else{
             joueur = new Mage(nJoueur, choixNiveau, choixForce, choixAgilite, choixIntelligence);
+            joueur.setOldVitalite(choixNiveau*5);
+            joueur.setVitalite(choixNiveau*5);
         }
 
         return joueur;
@@ -83,6 +89,7 @@ public class JeuLanceur {
         tab2Joueurs = this.creerPersonnages();
         Personnage attaquant = null;
         Personnage adversaire = null;
+        Personnage remplacant = null;
         int reponse;
         int nJoueur=1;
         for(Personnage joueur : tab2Joueurs){
@@ -95,17 +102,35 @@ public class JeuLanceur {
         }
 
         do{
-            System.out.print("Joueur " + attaquant.getNJoueur() + "(" + attaquant.getNiveau()*5 + " de vitalité). ");
-            reponse = this.getSaisieVerificateur().saisirUnNb("Veuillez choisir votre action (1: Attaque Basique, 2: Attaque Spéciale)");
+            do{
+                System.out.print("Joueur " + attaquant.getNJoueur() + " (" + attaquant.getVitalite() + " de vitalité). ");
+                reponse = this.getSaisieVerificateur().saisirUnNb("Veuillez choisir votre action (1: Attaque Basique, 2: Attaque Spéciale)");
 
-            if(reponse == 1){
-                attaquant.envoyerAttaqueBasique(attaquant, adversaire);
-            }
-            if(reponse == 2){
-                attaquant.envoyerAttaqueSpeciale(attaquant, adversaire);
-            }
-
-        }while(reponse<0 && reponse>2);
+                if(reponse == 1){
+                    attaquant.envoyerAttaqueBasique(attaquant, adversaire);
+                }
+                if(reponse == 2){
+                    attaquant.envoyerAttaqueSpeciale(attaquant, adversaire);
+                }
+                remplacant = attaquant;
+                attaquant = adversaire;
+                System.out.println("----------data de joueur "+ attaquant.getNJoueur()+" ----------");
+                System.out.println("Niveau : " + attaquant.getNiveau());
+                System.out.println("Force : " + attaquant.getForce());
+                System.out.println("Agilite : " + attaquant.getAgilite());
+                System.out.println("Intelligence : " + attaquant.getIntelligence());
+                System.out.println("Nouvelle Vitalité : " + attaquant.getVitalite());
+                System.out.println("Ancienne Vitalité : " + attaquant.getOldVitalite());
+                adversaire = remplacant;
+                System.out.println("----------data de joueur "+ adversaire.getNJoueur()+" ----------");
+                System.out.println("Niveau : " + adversaire.getNiveau());
+                System.out.println("Force : " + adversaire.getForce());
+                System.out.println("Agilite : " + adversaire.getAgilite());
+                System.out.println("Intelligence : " + adversaire.getIntelligence());
+                System.out.println("Nouvelle Vitalité : " + adversaire.getVitalite());
+                System.out.println("Ancienne Vitalité : " + adversaire.getOldVitalite());
+            }while(reponse>0 && reponse<=2);
+        }while(attaquant.getVitalite()>0 && adversaire.getVitalite()>0 );
 
     }
 
