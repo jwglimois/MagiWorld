@@ -60,15 +60,14 @@ public class JeuLanceur {
                 isValid = true;
             }
         }while(!(isValid));
-
         return choixPersonnage;
     }
 
     /**
      * choisirCaracteristiques() sert à selectionner les caracteristiques du personnage
-     * @param choixPersonnage
-     * @param nJoueur
-     * @return
+     * @param choixPersonnage La 1ère valeur d'entrée est un nombre entier qui représente le choix du personnage
+     * @param nJoueur La 2ère valeur d'entrée est un nombre entier qui représente le numéro du joueur
+     * @return On retourne un objet de type Personnage qui comprend tous les caractérisques dans ses attributs
      */
     public  Personnage choisirCaracteristiques(int choixPersonnage, int nJoueur){
         Personnage joueur;
@@ -89,10 +88,13 @@ public class JeuLanceur {
             joueur.setOldVitalite( tabCar[0]*5 );
             joueur.setVitalite( tabCar[0]*5 );
         }
-
         return joueur;
     }
 
+    /**
+     * getCaracteristiques() sert à récupérer les valeurs des caractéristiques entrés par l'utilisateur
+     * @return la valeur de retour est un tableau qui comprend tous les valeurs des caractéristiques entrés par l'utilisateur
+     */
     public int[] getCaracteristiques(){
         int choixNiveau, choixForce, choixAgilite, choixIntelligence;
         boolean isValid;
@@ -118,6 +120,14 @@ public class JeuLanceur {
         return tabCaracteristiques;
     }
 
+    /**
+     * controllerValeurCaracteristique() sert à controller les valeurs saisies par l'utilisateur
+     * @param choixNiveau La 1ère valeur d'entrée est un nombre entier qui représente le choix du Niveau
+     * @param choixForce La 2ère valeur d'entrée est un nombre entier qui représente le choix de la Force
+     * @param choixAgilite La 3ère valeur d'entrée est un nombre entier qui représente le choix de l'agilité
+     * @param choixIntelligence La 4ère valeur d'entrée est un nombre entier qui représente le choix de l'intelligence
+     * @return La valeur de retour est un booléen. ce qui peremt de valider la saisie de l'utilisateur
+     */
     public boolean controllerValeurCaracteristique(int choixNiveau, int choixForce, int choixAgilite, int choixIntelligence){
         boolean isValid;
         int[] tab3Choix = new int[3];
@@ -136,16 +146,17 @@ public class JeuLanceur {
                 }
                 return isValid = true;
         }
-
-
     }
 
+
+    /**
+     * choisirUneAction() permet à l'utilisateur de selectionner une action
+     */
     public void choisirUneAction(){
         tab2Joueurs = this.creerPersonnages();
         Personnage attaquant = null;
         Personnage adversaire = null;
         Personnage remplacant;
-        int choixAction;
         int nJoueur=1;
         for(Personnage joueur : tab2Joueurs){
             if(nJoueur==1){
@@ -155,38 +166,21 @@ public class JeuLanceur {
             }
             nJoueur++;
         }
-
         do{
             System.out.print("Joueur " + attaquant.getNJoueur() + " (" + attaquant.getVitalite() + " de vitalité). ");
             this.afficherActions(attaquant, adversaire);
             remplacant = attaquant;
             attaquant = adversaire;
-            /*
-            System.out.println("----------data de joueur "+ attaquant.getNJoueur()+" ----------");
-            System.out.println("Niveau : " + attaquant.getNiveau());
-            System.out.println("Force : " + attaquant.getForce());
-            System.out.println("Agilite : " + attaquant.getAgilite());
-            System.out.println("Intelligence : " + attaquant.getIntelligence());
-            System.out.println("Nouvelle Vitalité : " + attaquant.getVitalite());
-            System.out.println("Ancienne Vitalité : " + attaquant.getOldVitalite());
-
-             */
             adversaire = remplacant;
-            /*
-            System.out.println("----------data de joueur "+ adversaire.getNJoueur()+" ----------");
-            System.out.println("Niveau : " + adversaire.getNiveau());
-            System.out.println("Force : " + adversaire.getForce());
-            System.out.println("Agilite : " + adversaire.getAgilite());
-            System.out.println("Intelligence : " + adversaire.getIntelligence());
-            System.out.println("Nouvelle Vitalité : " + adversaire.getVitalite());
-            System.out.println("Ancienne Vitalité : " + adversaire.getOldVitalite());
-
-             */
-
         }while(attaquant.getVitalite()>0 && adversaire.getVitalite()>0 );
-
     }
 
+
+    /**
+     * afficherActions() permet d'afficher les actions selectionnées
+     * @param attaquant la 1ère valeur d'entrée est un objet de type Personnage qui représente l'attaquant
+     * @param adversaire la 2ère valeur d'entrée est un objet de type Personnage qui représente l'adversaire
+     */
     public void afficherActions(Personnage attaquant, Personnage adversaire){
         int choixAction;
         do{
