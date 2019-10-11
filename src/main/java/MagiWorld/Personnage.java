@@ -2,106 +2,122 @@ package MagiWorld;
 
 public abstract class Personnage {
 
-
     /**
-     * Déclaration de 4 nombres entiers: niveau, force, agilite, intelligence.
+     * Déclaration d'un nombre entier pour le numéro de Joueur.
      */
     private int nJoueur;
+    /**
+     * Déclaration d'un nombre entier pour le niveau
+     */
     private int niveau;
+    /**
+     * Déclaration d'un nombre entier pour la force
+     */
     private int force;
+    /**
+     * Déclaration d'un nombre entier pour l'agilité
+     */
     private int agilite;
+    /**
+     * Déclaration d'un nombre entier pour l'intelligence
+     */
     private int intelligence;
+    /**
+     * Déclaration d'un nombre entier pour la vitalité du joueur
+     */
     private int vitalite;
+    /**
+     * Déclaration d'un nombre entier pour garder en mémoire la vitalité initiale du joueur
+     */
     private int oldVitalite;
 
-    public int getOldVitalite() {
-        return oldVitalite;
-    }
-
-
-    public void setOldVitalite(int oldVitalite) {
-        this.oldVitalite = oldVitalite;
-    }
-
-
-
-    public void setNiveau(int niveau) {
-        this.niveau = niveau;
-    }
-    public void setForce(int force) {
-        this.force = force;
-    }
-
-    public void setAgilite(int agilite) {
-        this.agilite = agilite;
-    }
-
-    public void setIntelligence(int intelligence) {
-        this.intelligence = intelligence;
-    }
-
-    public int getVitalite() {
-        return vitalite;
-    }
-
-
-    public void setVitalite(int vitalite) {
-        this.vitalite = vitalite;
-    }
-
-
-
-    public int getNJoueur() {
-        return nJoueur;
-    }
-
-    public int getNiveau() {
-        return niveau;
-    }
-
-    public int getForce() {
-        return force;
-    }
-
-    public int getAgilite() {
-        return agilite;
-    }
-
-    public int getIntelligence() {
-        return intelligence;
-    }
-
-
-    public void setSortBasique(String sortBasique) {
-        this.sortBasique = sortBasique;
-    }
-
-    public void setSortSpeciale(String sortSpeciale) {
-        this.sortSpeciale = sortSpeciale;
-    }
-
     /**
-     * Déclaration de 2 types de sort: sortBasique, sortSpecial, nomJoueur.
+     * Getter de l'attribut nJoueur
+     * @return la valeur de retour est un nombre entier qui représente le numéro de joueur
      */
-    private String sortBasique, sortSpeciale, nomJoueur;
+    public int getNJoueur() { return nJoueur; }
 
     /**
-     * Getteur de l'attribut 'sortBasique'
-     * @return La valeur de retour est un String
+     * Getter de l'attribut niveau
+     * @return la valeur de retour est un nombre entier qui représente le niveau du joueur
+     */
+    public int getNiveau() { return niveau; }
+
+    /**
+     * Getter de l'attribut force
+     * @return la valeur de retour est un nombre entier qui représente la force du joueur
+     */
+    public int getForce() { return force; }
+
+    /**
+     * Getter de l'attribut agilite
+     * @return la valeur de retour est un nombre entier qui représente l'agilité du joueur
+     */
+    public int getAgilite() { return agilite; }
+
+    /**
+     * Getter de l'attribut intelligence
+     * @return la valeur de retour est un nombre entier qui représente l'intelligence du joueur
+     */
+    public int getIntelligence() { return intelligence; }
+
+    /**
+     * Getter de l'attribut vitalité
+     * @return la valeur de retour est un nombre entier qui représente la vitalité du joueur
+     */
+    public int getVitalite() { return vitalite; }
+
+    /**
+     * Getter de l'attribut oldVitalite
+     * @return la valeur de retour est un nombre entier qui représente la vitalité initiale du joueur
+     */
+    public int getOldVitalite() { return oldVitalite; }
+
+    /**
+     * Setter qui paramètre le niveau du joueur
+     */
+    public void setNiveau(int niveau) { this.niveau = niveau; }
+
+    /**
+     * Setter qui paramètre l'agilité du joueur
+     */
+    public void setAgilite(int agilite) { this.agilite = agilite; }
+
+    /**
+     * Setter qui paramètre la vitalité du joueur
+     */
+    public void setVitalite(int vitalite) { this.vitalite = vitalite; }
+
+    /**
+     * Setter qui paramètre la vitalité initiale du joueur
+     */
+    public void setOldVitalite(int oldVitalite) { this.oldVitalite = oldVitalite; }
+
+    /**
+     * La fonction abstraite getSortBasique() permettant aux classes dérivées de récupérer le nom de leur sort basique
+     * @return la valeur de retour est un String qui représente le nom du sort basique
      */
     public abstract String getSortBasique();
 
-    public abstract String getSortSpeciale();
     /**
-     * Getteur de l'attribut 'sortSpecial'
-     * @return La valeur de retour est un String
+     * La fonction abstraite getSortSpecial() permettant aux classes dérivées de récupérer le nom de leur sort spéciale
+     * @return la valeur de retour est un String qui représente le nom du sort spéciale
      */
-    public String getSortSpecial() {
-        return sortSpeciale;
-    }
+    public abstract String getSortSpecial();
 
+    /**
+     * Constructeur par défault
+     */
     public Personnage(){}
 
+    /**
+     * Surcharge du constructeur. Ce qui sert à recupérer les données d'un joueur
+     * @param nJoueur La 1ère valeur d'entrée un nombre entier qui représente le numéro du joueur
+     * @param niveau La 2ère valeur d'entrée un nombre entier qui représente le niveau du joueur
+     * @param force La 3ère valeur d'entrée un nombre entier qui représente la force du joueur
+     * @param agilite La 4ère valeur d'entrée un nombre entier qui représente l'agilité du joueur
+     * @param intelligence La 5ère valeur d'entrée un nombre entier qui représente l'intelligence du joueur
+     */
     public Personnage(int nJoueur, int niveau, int force, int agilite, int intelligence) {
         this.nJoueur = nJoueur;
         this.niveau = niveau;
@@ -110,9 +126,21 @@ public abstract class Personnage {
         this.intelligence = intelligence;
     }
 
-
+    /**
+     * La fonction abstraite envoyerAttaqueBasique() permettant aux classes dérivées de préciser les détails de la fonction
+     */
     public abstract void envoyerAttaqueBasique(Personnage attaquant, Personnage adversaire);
+
+    /**
+     * La fonction abstraite envoyerAttaqueSpecial() permettant aux classes dérivées de préciser les détails de la fonction
+     */
     public abstract void envoyerAttaqueSpeciale(Personnage attaquant, Personnage adversaire);
+
+    /**
+     * annocerSiPerte permet d'informer l'utilisateur quel jouer a perdu
+     * @param attaquant La 1ère valeur d'entrée est un objet de type Personnage qui représente l'attaquant
+     * @param adversaire La 2ère valeur d'entrée est un objet de type Personnage qui représente l'adversaire
+     */
     public void annoncerSiPerte(Personnage attaquant, Personnage adversaire){
         if(attaquant.getVitalite()<=0){
             System.out.println("Joueur "+ attaquant.getNJoueur() + " est mort.");

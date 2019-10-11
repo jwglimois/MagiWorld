@@ -6,11 +6,14 @@ import java.util.Scanner;
 
 public class SaisieVerificateur {
 
-    public static void main(String[] args) {
-
-    }
-    // On déclare nos objets comme constants avec le mot de clé: final.
+    /**
+     * Déclaration d'un constant 'saisie' du type Scanner
+     */
     private final Scanner saisie;
+
+    /**
+     * Déclaration d'un constant 'saisie' du type PrintStream
+     */
     private final PrintStream dataSortie;
 
     /**
@@ -18,13 +21,16 @@ public class SaisieVerificateur {
      * @param dataEntre Notre 1ère valeur d'entrée est un objet de type InputStream
      * @param dataSortie Notre 2ère valeur d'entrée est un objet de type PrintStream
      */
-
     public SaisieVerificateur (InputStream dataEntre, PrintStream dataSortie){
         saisie = new Scanner(dataEntre);
         this.dataSortie = dataSortie;
     }
 
-
+    /**
+     * saisirUnNb() permet de controller la saisie de l'utilisateur pour assurer que la saisie soit un nombre entier
+     * @param question La valeur d'entrée est un String qui indiquer à l'utilisateur la consign de saisir
+     * @return la Valeur de retour est un nombre entier qui représente la saisie de l'utilisateur, bien validé par cette fonction
+     */
     public int saisirUnNb (String question){
         dataSortie.println(question);
         boolean isNb;
@@ -41,9 +47,7 @@ public class SaisieVerificateur {
                 monNb = saisie.nextInt();
                 isNb = true;
             }
-
         }while(!(isNb));
-
         return monNb;
     }
 

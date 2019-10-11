@@ -9,7 +9,6 @@ public class JeuLanceur {
      */
     private SaisieVerificateur saisieVerificateur = new SaisieVerificateur(System.in, System.out);
 
-
     /**
      * Getter pour récupérer l'attribut de la classe SaisieVerificateur qui permet de contrôler les saisies de l'utilisateur
      * @return
@@ -18,12 +17,10 @@ public class JeuLanceur {
         return saisieVerificateur;
     }
 
-
     /**
      * Déclaration d'un tableau qui a pour objectif de récuperer nos joueurs: joueur et son adversaire
      */
     List<Personnage> tab2Joueurs = new ArrayList<>();
-
 
     /**
      * creerPersonnages() sert mettre les choix de Personnage dans le tableau tab2Joueurs
@@ -139,8 +136,8 @@ public class JeuLanceur {
             return isValid = false;
         }else{
                 int i=0;
-                while(tab3Choix[i]<=0 || tab3Choix[i]>100){
-                    System.out.println("Pour la Force, l'agilité, l'intelligence, vous devez saisir entre 0 et 100");
+                while(tab3Choix[i]<0 || tab3Choix[i]>100){
+                    System.out.println("Pour la Force, l'agilité, ou l'intelligence, vous devez saisir entre 0 et 100");
                     i++;
                     return isValid = false;
                 }
