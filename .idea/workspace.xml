@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd2b466a-8752-4fc0-a909-26a7b75898e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/MagiWorld/JeuLanceurTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/Guerrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/Guerrier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MagiWorld/SaisieVerificateurTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MagiWorld/SaisieVerificateurTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MagiWorld/Guerrier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MagiWorld/Guerrier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MagiWorld/Mage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MagiWorld/Mage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MagiWorld/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MagiWorld/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MagiWorld/Personnage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MagiWorld/Personnage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MagiWorld/Rodeur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MagiWorld/Rodeur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/MagiWorld/JeuLanceurTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MagiWorld/JeuLanceurTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +53,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JeuLanceurTest.Given_InputValues_WhenCheckIfValuesEnterInRange_ThenGetTrue">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MagiWorld.Main" />
       <module name="JeuEpic" />
@@ -140,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.JeuLanceurTest.Given_InputValues_WhenCheckIfValuesEnterInRange_ThenGetTrue" />
         <item itemvalue="JUnit.JeuLanceurTest.Given_ChoixPerson_and_nJouer_When_ChoisirCaracteristiques_ThenGetPersonnage" />
         <item itemvalue="JUnit.JeuLanceurTest.Given_InputCaracteritiques_WhenAskInput_ThenGetIntCaracteristiques" />
         <item itemvalue="JUnit.JeuLanceurTest.Given_Input1_2_3_WhenLanchchoisirPersonnage_ThenGet1_2_3" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
