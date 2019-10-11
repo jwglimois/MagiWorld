@@ -2,6 +2,7 @@ package MagiWorld;
 
 public class Guerrier extends Personnage {
 
+    public Guerrier(){super();}
 
     /**
      * Constructeur de la classe Rodeur.

@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd2b466a-8752-4fc0-a909-26a7b75898e6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/MagiWorld/JeuLanceurTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/Guerrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/Guerrier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/JeuLanceur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/JeuLanceur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/Personnage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/Personnage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/Rodeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/Rodeur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagiWorld/SaisieVerificateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagiWorld/SaisieVerificateur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MagiWorld/SaisieVerificateurTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MagiWorld/SaisieVerificateurTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MagiWorld/Guerrier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MagiWorld/Guerrier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MagiWorld/Mage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MagiWorld/Mage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MagiWorld/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MagiWorld/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MagiWorld/Personnage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MagiWorld/Personnage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MagiWorld/Rodeur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MagiWorld/Rodeur.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -59,33 +60,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Guerrier" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MagiWorld.Guerrier" />
-      <module name="JeuEpic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MagiWorld.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JeuLanceur" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MagiWorld.JeuLanceur" />
-      <module name="JeuEpic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MagiWorld.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.JeuLanceurTest.Given_InputValues_WhenCheckIfValuesEnterInRange_ThenGetTrue">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MagiWorld.Main" />
       <module name="JeuEpic" />
@@ -99,7 +74,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SaisieVerificateurTest.Given_InputOne_WhenAskQuestion_ThenGetOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JeuLanceurTest.Given_ChoixPerson_and_nJouer_When_ChoisirCaracteristiques_ThenGetPersonnage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JeuEpic" />
       <extension name="coverage">
         <pattern>
@@ -108,8 +83,56 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="MagiWorld" />
-      <option name="MAIN_CLASS_NAME" value="MagiWorld.SaisieVerificateurTest" />
-      <option name="METHOD_NAME" value="Given_InputOne_WhenAskQuestion_ThenGetOne" />
+      <option name="MAIN_CLASS_NAME" value="MagiWorld.JeuLanceurTest" />
+      <option name="METHOD_NAME" value="Given_ChoixPerson_and_nJouer_When_ChoisirCaracteristiques_ThenGetPersonnage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JeuLanceurTest.Given_Input1_2_3_WhenLanchchoisirPersonnage_ThenGet1_2_3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JeuEpic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MagiWorld.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="MagiWorld" />
+      <option name="MAIN_CLASS_NAME" value="MagiWorld.JeuLanceurTest" />
+      <option name="METHOD_NAME" value="Given_Input1_2_3_WhenLanchchoisirPersonnage_ThenGet1_2_3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JeuLanceurTest.Given_InputCaracteritiques_WhenAskInput_ThenGetIntCaracteristiques" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JeuEpic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MagiWorld.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="MagiWorld" />
+      <option name="MAIN_CLASS_NAME" value="MagiWorld.JeuLanceurTest" />
+      <option name="METHOD_NAME" value="Given_InputCaracteritiques_WhenAskInput_ThenGetIntCaracteristiques" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JeuLanceurTest.Given_InputValues_WhenCheckIfValuesEnterInRange_ThenGetTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JeuEpic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MagiWorld.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="MagiWorld" />
+      <option name="MAIN_CLASS_NAME" value="MagiWorld.JeuLanceurTest" />
+      <option name="METHOD_NAME" value="Given_InputValues_WhenCheckIfValuesEnterInRange_ThenGetTrue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -117,10 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JeuLanceurTest.Given_InputValues_WhenCheckIfValuesEnterInRange_ThenGetTrue" />
+        <item itemvalue="JUnit.JeuLanceurTest.Given_ChoixPerson_and_nJouer_When_ChoisirCaracteristiques_ThenGetPersonnage" />
+        <item itemvalue="JUnit.JeuLanceurTest.Given_InputCaracteritiques_WhenAskInput_ThenGetIntCaracteristiques" />
+        <item itemvalue="JUnit.JeuLanceurTest.Given_Input1_2_3_WhenLanchchoisirPersonnage_ThenGet1_2_3" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Guerrier" />
-        <item itemvalue="JUnit.SaisieVerificateurTest.Given_InputOne_WhenAskQuestion_ThenGetOne" />
-        <item itemvalue="Application.JeuLanceur" />
       </list>
     </recent_temporary>
   </component>
