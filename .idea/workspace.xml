@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cd2b466a-8752-4fc0-a909-26a7b75898e6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/MagiWorld/JeuLanceurTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MagiWorld/JeuLanceurTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +27,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/creez-un-jeu-de-combat-epique_exemple-2018-06-06T115224/MagiWorld" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -53,7 +53,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.MagiWorld in JeuEpic">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MagiWorld.Main" />
       <module name="JeuEpic" />
@@ -78,22 +78,6 @@
       <option name="PACKAGE_NAME" value="MagiWorld" />
       <option name="MAIN_CLASS_NAME" value="MagiWorld.JeuLanceurTest" />
       <option name="METHOD_NAME" value="Given_ChoixPerson_and_nJouer_When_ChoisirCaracteristiques_ThenGetPersonnage" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JeuLanceurTest.Given_Input1_2_3_WhenLanchchoisirPersonnage_ThenGet1_2_3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JeuEpic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MagiWorld.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="MagiWorld" />
-      <option name="MAIN_CLASS_NAME" value="MagiWorld.JeuLanceurTest" />
-      <option name="METHOD_NAME" value="Given_Input1_2_3_WhenLanchchoisirPersonnage_ThenGet1_2_3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -131,13 +115,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MagiWorld in JeuEpic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JeuEpic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MagiWorld.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="MagiWorld" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MagiWorld in JeuEpic" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.JeuLanceurTest.Given_InputValues_WhenCheckIfValuesEnterInRange_ThenGetTrue" />
         <item itemvalue="JUnit.JeuLanceurTest.Given_ChoixPerson_and_nJouer_When_ChoisirCaracteristiques_ThenGetPersonnage" />
         <item itemvalue="JUnit.JeuLanceurTest.Given_InputCaracteritiques_WhenAskInput_ThenGetIntCaracteristiques" />
-        <item itemvalue="JUnit.JeuLanceurTest.Given_Input1_2_3_WhenLanchchoisirPersonnage_ThenGet1_2_3" />
       </list>
     </recent_temporary>
   </component>
@@ -166,5 +164,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/JeuEpic$MagiWorld_in_JeuEpic.ic" NAME="MagiWorld in JeuEpic Coverage Results" MODIFIED="1570918937505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>MagiWorld.*</FILTER>
+    </SUITE>
   </component>
 </project>

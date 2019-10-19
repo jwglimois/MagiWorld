@@ -124,6 +124,10 @@ public abstract class Personnage {
         this.force= force;
         this.agilite = agilite;
         this.intelligence = intelligence;
+
+        this.vitalite = niveau*5;
+        if(force + agilite + intelligence > niveau)
+            throw new FauxNiveauException();
     }
 
     /**

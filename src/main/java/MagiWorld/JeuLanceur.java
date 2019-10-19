@@ -46,11 +46,12 @@ public class JeuLanceur {
      * @return La valeur de retour est un nombre entier qui représente le choix du personnage.
      */
     public int choisirPersonnage(){
-        int choixPersonnage;
         boolean isValid;
+        int choixPersonnage;
+
         do{
             choixPersonnage = this.getSaisieVerificateur().saisirUnNb("Veuillez choisir la classe de votre personnage (1: Guerrier, 2: Rôdeur, 3: Mage)");
-            if(choixPersonnage>3 || choixPersonnage<0){
+            if(choixPersonnage>3 || choixPersonnage<=0){
                 System.out.println("Vous devez saisir un nombre entre 1 et 3.");
                 isValid = false;
             }else{
