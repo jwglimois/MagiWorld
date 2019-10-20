@@ -2,95 +2,24 @@ package MagiWorld;
 
 public abstract class Personnage {
 
-    /**
-     * Déclaration d'un nombre entier pour le numéro de Joueur.
-     */
     private int nJoueur;
-    /**
-     * Déclaration d'un nombre entier pour le niveau
-     */
     private int niveau;
-    /**
-     * Déclaration d'un nombre entier pour la force
-     */
     private int force;
-    /**
-     * Déclaration d'un nombre entier pour l'agilité
-     */
     private int agilite;
-    /**
-     * Déclaration d'un nombre entier pour l'intelligence
-     */
     private int intelligence;
-    /**
-     * Déclaration d'un nombre entier pour la vitalité du joueur
-     */
     private int vitalite;
-    /**
-     * Déclaration d'un nombre entier pour garder en mémoire la vitalité initiale du joueur
-     */
     private int oldVitalite;
 
-    /**
-     * Getter de l'attribut nJoueur
-     * @return la valeur de retour est un nombre entier qui représente le numéro de joueur
-     */
     public int getNJoueur() { return nJoueur; }
-
-    /**
-     * Getter de l'attribut niveau
-     * @return la valeur de retour est un nombre entier qui représente le niveau du joueur
-     */
     public int getNiveau() { return niveau; }
-
-    /**
-     * Getter de l'attribut force
-     * @return la valeur de retour est un nombre entier qui représente la force du joueur
-     */
     public int getForce() { return force; }
-
-    /**
-     * Getter de l'attribut agilite
-     * @return la valeur de retour est un nombre entier qui représente l'agilité du joueur
-     */
     public int getAgilite() { return agilite; }
-
-    /**
-     * Getter de l'attribut intelligence
-     * @return la valeur de retour est un nombre entier qui représente l'intelligence du joueur
-     */
     public int getIntelligence() { return intelligence; }
-
-    /**
-     * Getter de l'attribut vitalité
-     * @return la valeur de retour est un nombre entier qui représente la vitalité du joueur
-     */
     public int getVitalite() { return vitalite; }
-
-    /**
-     * Getter de l'attribut oldVitalite
-     * @return la valeur de retour est un nombre entier qui représente la vitalité initiale du joueur
-     */
     public int getOldVitalite() { return oldVitalite; }
-
-    /**
-     * Setter qui paramètre le niveau du joueur
-     */
     public void setNiveau(int niveau) { this.niveau = niveau; }
-
-    /**
-     * Setter qui paramètre l'agilité du joueur
-     */
     public void setAgilite(int agilite) { this.agilite = agilite; }
-
-    /**
-     * Setter qui paramètre la vitalité du joueur
-     */
     public void setVitalite(int vitalite) { this.vitalite = vitalite; }
-
-    /**
-     * Setter qui paramètre la vitalité initiale du joueur
-     */
     public void setOldVitalite(int oldVitalite) { this.oldVitalite = oldVitalite; }
 
     /**
@@ -118,14 +47,14 @@ public abstract class Personnage {
      * @param agilite La 4ère valeur d'entrée un nombre entier qui représente l'agilité du joueur
      * @param intelligence La 5ère valeur d'entrée un nombre entier qui représente l'intelligence du joueur
      */
-    public Personnage(int nJoueur, int niveau, int force, int agilite, int intelligence) {
+    public Personnage(int nJoueur, int niveau, int force, int agilite, int intelligence) throws FauxNiveauException {
         this.nJoueur = nJoueur;
         this.niveau = niveau;
         this.force= force;
         this.agilite = agilite;
         this.intelligence = intelligence;
-
         this.vitalite = niveau*5;
+
         if(force + agilite + intelligence > niveau)
             throw new FauxNiveauException();
     }

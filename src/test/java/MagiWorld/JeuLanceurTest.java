@@ -2,6 +2,11 @@ package MagiWorld;
 
 import org.testng.annotations.Test;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
@@ -72,6 +77,7 @@ class JeuLanceurTest {
      * @return La valeur de retour est un objet du type Personnage qui représente le choix du personnage
      */
     public Personnage testMock_choisirCaracteristiques(JeuLanceur jl){
+
         return jl.choisirCaracteristiques(1,1);
     }
 
@@ -95,4 +101,21 @@ class JeuLanceurTest {
     }
 
 
+    @org.junit.jupiter.api.Test
+    void Given_informationOfPersonage_WhenCreatePersonage_Then2PersonageInTable() {
+
+        JeuLanceur jl = mock(JeuLanceur.class);
+        Personnage guerrier = new Guerrier(1,10,10,0,0);
+        Personnage mage = new Mage(2,10,0,0,10);
+        List<Personnage> tab2Personage = new ArrayList<>();
+        tab2Personage.add(guerrier);
+        tab2Personage.add(mage);
+        when(jl.creerPersonnages()).thenReturn(tab2Personage);
+        assertEquals(tab2Personage, testMock_creerPersonnages(jl));
+
+    }
+
+    public List<Personnage> testMock_creerPersonnages(JeuLanceur jl){
+        return jl.creerPersonnages();
+    }
 }

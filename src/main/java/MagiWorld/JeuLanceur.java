@@ -4,22 +4,12 @@ import java.util.*;
 
 public class JeuLanceur {
 
-    /**
-     * Déclaration de l'attribut de type SaisieVerificateur
-     */
     private SaisieVerificateur saisieVerificateur = new SaisieVerificateur(System.in, System.out);
 
-    /**
-     * Getter pour récupérer l'attribut de la classe SaisieVerificateur qui permet de contrôler les saisies de l'utilisateur
-     * @return
-     */
     public SaisieVerificateur getSaisieVerificateur() {
         return saisieVerificateur;
     }
 
-    /**
-     * Déclaration d'un tableau qui a pour objectif de récuperer nos joueurs: joueur et son adversaire
-     */
     List<Personnage> tab2Joueurs = new ArrayList<>();
 
     /**
@@ -152,25 +142,26 @@ public class JeuLanceur {
      */
     public void choisirUneAction(){
         tab2Joueurs = this.creerPersonnages();
-        Personnage attaquant = null;
-        Personnage adversaire = null;
-        Personnage remplacant;
+        Personnage joueurActuel = null;
+        Personnage joueurSuivant = null;
+        Personnage temp;
         int nJoueur=1;
         for(Personnage joueur : tab2Joueurs){
             if(nJoueur==1){
-                attaquant = joueur;
+                joueurActuel = joueur;
             }else{
-                adversaire = joueur;
+                joueurSuivant = joueur;
             }
             nJoueur++;
         }
         do{
-            System.out.print("Joueur " + attaquant.getNJoueur() + " (" + attaquant.getVitalite() + " de vitalité). ");
-            this.afficherActions(attaquant, adversaire);
-            remplacant = attaquant;
-            attaquant = adversaire;
-            adversaire = remplacant;
-        }while(attaquant.getVitalite()>0 && adversaire.getVitalite()>0 );
+            System.out.print("Joueur " + joueurActuel.getNJoueur() + " (" + joueurActuel.getVitalite() + " de vitalité). ");
+            this.afficherActions(joueurActuel, joueurSuivant);
+            //On échange les roles de l'attaquant et de l'adversaire. l'attaquant devient l'adversaire; l'adversaire devient l'attaquant.
+            temp = joueurActuel;
+            joueurActuel = joueurSuivant;
+            joueurSuivant = temp;
+        }while(joueurActuel.getVitalite()>0 && joueurSuivant.getVitalite()>0 );
     }
 
 
