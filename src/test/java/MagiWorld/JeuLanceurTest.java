@@ -118,4 +118,8 @@ class JeuLanceurTest {
     public List<Personnage> testMock_creerPersonnages(JeuLanceur jl){
         return jl.creerPersonnages();
     }
+
+    @org.junit.jupiter.api.Test
+    void choisirUneAction() {
+    }
 }

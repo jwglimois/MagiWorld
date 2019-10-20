@@ -148,8 +148,10 @@ public class JeuLanceur {
         int nJoueur=1;
         for(Personnage joueur : tab2Joueurs){
             if(nJoueur==1){
+                //Joueur N°1 est le joueurActuel
                 joueurActuel = joueur;
             }else{
+                //Joueur N°2 est le joueurSuivant
                 joueurSuivant = joueur;
             }
             nJoueur++;
@@ -157,7 +159,7 @@ public class JeuLanceur {
         do{
             System.out.print("Joueur " + joueurActuel.getNJoueur() + " (" + joueurActuel.getVitalite() + " de vitalité). ");
             this.afficherActions(joueurActuel, joueurSuivant);
-            //On échange les roles de l'attaquant et de l'adversaire. l'attaquant devient l'adversaire; l'adversaire devient l'attaquant.
+            //On échange les rôles des joueurs. Le joueur N°2 devient joueurActuel et le joueur N°1 suivant devient joueurSuivant .
             temp = joueurActuel;
             joueurActuel = joueurSuivant;
             joueurSuivant = temp;
