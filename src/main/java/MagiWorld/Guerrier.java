@@ -4,14 +4,7 @@ public class Guerrier extends Personnage {
 
     public Guerrier(){super();}
 
-    /**
-     * Constructeur de la classe Rodeur.
-     * @param nJoueur La 1ère valeur d'entrée est un nombre eniter qui représente le numéro du joueur
-     * @param niveau La 2ère valeur d'entrée est un nombre eniter qui représente le niveau du joueur
-     * @param force La 3ère valeur d'entrée est un nombre eniter qui représente la force du joueur
-     * @param agilite La 4ère valeur d'entrée est un nombre eniter qui représente l'agilité'du joueur
-     * @param intelligence La 5ère valeur d'entrée est un nombre eniter qui représente l'intelligence du joueur
-     */
+
     public Guerrier(int nJoueur, int niveau, int force, int agilite, int intelligence){
         super(nJoueur, niveau, force, agilite, intelligence);
         System.out.println("Woarg je suis le Guerrier. Joueur "+ nJoueur + ", niveau " + niveau  + " , je possède " + this.getVitalite()+

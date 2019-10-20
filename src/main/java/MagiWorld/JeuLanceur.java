@@ -158,7 +158,7 @@ public class JeuLanceur {
         }
         do{
             System.out.print("Joueur " + joueurActuel.getNJoueur() + " (" + joueurActuel.getVitalite() + " de vitalité). ");
-            this.afficherActions(joueurActuel, joueurSuivant);
+            this.afficherResultatAction(joueurActuel, joueurSuivant);
             //On échange les rôles des joueurs. Le joueur N°2 devient joueurActuel et le joueur N°1 suivant devient joueurSuivant .
             temp = joueurActuel;
             joueurActuel = joueurSuivant;
@@ -172,7 +172,7 @@ public class JeuLanceur {
      * @param attaquant la 1ère valeur d'entrée est un objet de type Personnage qui représente l'attaquant
      * @param adversaire la 2ère valeur d'entrée est un objet de type Personnage qui représente l'adversaire
      */
-    public void afficherActions(Personnage attaquant, Personnage adversaire){
+    public void afficherResultatAction(Personnage attaquant, Personnage adversaire){
         int choixAction;
         do{
             choixAction = this.getSaisieVerificateur().saisirUnNb("Veuillez choisir votre action (1: Attaque Basique, 2: Attaque Spéciale)");
@@ -185,6 +185,9 @@ public class JeuLanceur {
             attaquant.envoyerAttaqueSpeciale(attaquant, adversaire);
         }
     }
+
+
+
 
 }
 

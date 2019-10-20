@@ -46,6 +46,7 @@ public class SaisieVerificateur {
             }else{
                 monNb = saisie.nextInt();
                 isNb = true;
+
             }
         }while(!(isNb));
         return monNb;

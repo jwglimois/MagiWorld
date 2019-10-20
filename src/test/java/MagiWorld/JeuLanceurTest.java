@@ -1,5 +1,6 @@
 package MagiWorld;
 
+import org.junit.platform.engine.support.descriptor.FileSystemSource;
 import org.testng.annotations.Test;
 
 import java.io.ByteArrayInputStream;
@@ -120,6 +121,15 @@ class JeuLanceurTest {
     }
 
     @org.junit.jupiter.api.Test
-    void choisirUneAction() {
+    void Given_2personages_WhenFlighting_ThenDisplayResultAction() {
+        System.setIn(new ByteArrayInputStream(String.format("1%n").getBytes()));
+        JeuLanceur jl = new JeuLanceur();
+        Personnage guerrier = new Guerrier(1,10,10,0,0);
+        Personnage mage = new Mage(2,10,0,0,10);
+        jl.afficherResultatAction(guerrier, mage);
+        assertEquals(50-10, mage.getVitalite());
+
     }
+
+
 }
