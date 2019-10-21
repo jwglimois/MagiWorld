@@ -8,7 +8,7 @@ public abstract class Personnage {
     private int agilite;
     private int intelligence;
     private int vitalite;
-    private int oldVitalite;
+
 
     public int getNJoueur() { return nJoueur; }
     public int getNiveau() { return niveau; }
@@ -16,11 +16,11 @@ public abstract class Personnage {
     public int getAgilite() { return agilite; }
     public int getIntelligence() { return intelligence; }
     public int getVitalite() { return vitalite; }
-    public int getOldVitalite() { return oldVitalite; }
+
     public void setNiveau(int niveau) { this.niveau = niveau; }
     public void setAgilite(int agilite) { this.agilite = agilite; }
     public void setVitalite(int vitalite) { this.vitalite = vitalite; }
-    public void setOldVitalite(int oldVitalite) { this.oldVitalite = oldVitalite; }
+
 
     /**
      * La fonction abstraite getSortBasique() permettant aux classes dérivées de récupérer le nom de leur sort basique

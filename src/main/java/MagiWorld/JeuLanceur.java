@@ -65,15 +65,12 @@ public class JeuLanceur {
 
         if(choixPersonnage == 1){
             joueur = new Guerrier( nJoueur, tabCar[0], tabCar[1], tabCar[2], tabCar[3] );
-            joueur.setOldVitalite( tabCar[0]*5 );
             joueur.setVitalite( tabCar[0]*5 );
         }else if(choixPersonnage ==2){
             joueur = new Rodeur( nJoueur, tabCar[0], tabCar[1], tabCar[2], tabCar[3] );
-            joueur.setOldVitalite( tabCar[0]*5 );
             joueur.setVitalite( tabCar[0]*5 );
         }else{
             joueur = new Mage( nJoueur, tabCar[0], tabCar[1], tabCar[2], tabCar[3] );
-            joueur.setOldVitalite( tabCar[0]*5 );
             joueur.setVitalite( tabCar[0]*5 );
         }
         return joueur;

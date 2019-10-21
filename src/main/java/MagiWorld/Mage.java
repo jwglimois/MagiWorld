@@ -56,7 +56,7 @@ public class Mage extends Personnage {
         int newVitalite = gain + attaquant.getVitalite();
 
         //La nouvelle vitalité ne doit pas dépasser l'ancienne
-        if(attaquant.getOldVitalite() >= newVitalite){
+        if(attaquant.getNiveau()*5 >= newVitalite){
             attaquant.setVitalite(newVitalite);
         }
 
