@@ -26,11 +26,8 @@ Each character owns 2 kinds of attacks:
 
 ## Getting Started
 
-The game works only with Windows Console. To launch the game, you can press Windows Key + R to open the Command Prompt (cmd) and type "java -jar YourPathWhereYouStoreTheGame" as the example as follows. Then, press "Enter". 
+You can run the game in an IDE of Java such as IntelliJ and Eclipse. 
 
-```
-java -jar C:\Users\Jia-Wen\Desktop\EscapeGame.jar
-```
 
 ### Prerequisites
 
