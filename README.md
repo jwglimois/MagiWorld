@@ -65,7 +65,7 @@ To deploy this game on a live system, make sure to have JDK installed and enviro
 ## Versioning
 
 Version 1.0 21/10/2019, in Paris
-We use [Git](https://git-scm.com/) for versioning. For the version available, see our last project on: https://github.com/jwglimois/EscapeGame.
+We use [Git](https://git-scm.com/) for versioning. For the version available, see our last project on: https://github.com/jwglimois/MagiWorld.
 
 ## Author
 
