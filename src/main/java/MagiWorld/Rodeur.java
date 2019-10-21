@@ -6,7 +6,7 @@ public class Rodeur extends Personnage {
 
     public Rodeur(int nJoueur, int niveau, int force, int agilite, int intelligence){
         super(nJoueur, niveau, force, agilite, intelligence);
-        System.out.println("Héhé, je suis le Rôdeur. Joueur "+ nJoueur + ", niveau " + niveau  + " , je possède " + this.getVitalite()+
+        System.out.println("Héhé, je suis le Rôdeur. Joueur "+ nJoueur + ", niveau " + niveau  + " , je possède " + vitalite+
                 " de vitalité, "+ force + " de force, " + agilite + " d'agilité, et " + intelligence + " d'intelligence !");
     }
 
@@ -36,10 +36,10 @@ public class Rodeur extends Personnage {
     @Override
     public void envoyerAttaqueBasique(Personnage attaquant, Personnage adversaire) {
         //Adversaire perd sur sa vitalité les points égaux à l’agilité du joueur.
-        int newVitalite = adversaire.getVitalite() - attaquant.getAgilite();
+        int newVitalite = adversaire.vitalite - attaquant.agilite;
         adversaire.setVitalite(newVitalite);
-        System.out.println("Joueur "+ attaquant.getNJoueur() + " utilise "+ attaquant.getSortBasique() + " et inflige " + attaquant.getAgilite() + " dommages.");
-        System.out.println("Joueur "+ adversaire.getNJoueur() + " perd " + attaquant.getAgilite() + " points de vie");
+        System.out.println("Joueur "+ attaquant.nJoueur + " utilise "+ attaquant.getSortBasique() + " et inflige " + attaquant.agilite + " dommages.");
+        System.out.println("Joueur "+ adversaire.nJoueur + " perd " + attaquant.agilite + " points de vie");
         this.annoncerSiPerte(attaquant, adversaire);
     }
 
@@ -51,16 +51,16 @@ public class Rodeur extends Personnage {
     @Override
     public void envoyerAttaqueSpeciale(Personnage attaquant, Personnage adversaire) {
         //Attaquant gagne son niveau divisé par 2 en agilité
-        int gain = attaquant.getNiveau()/2;
-        int newAgilite = gain + attaquant.getAgilite();
+        int gain = attaquant.niveau/2;
+        int newAgilite = gain + attaquant.agilite;
         attaquant.setAgilite(newAgilite);
 
         //Comme niveau = force + agilité + intelligence. Il faudrait augmenter le niveau aussi.
-        int newNiveau =  gain + attaquant.getNiveau();
+        int newNiveau =  gain + attaquant.niveau;
         attaquant.setNiveau(newNiveau);
 
-        System.out.println("Joueur "+ attaquant.getNJoueur() + " utilise "+ attaquant.getSortSpecial() + " et gagne " + gain + " en agilité.");
-        System.out.print("Joueur "+ attaquant.getNJoueur() + " (" + attaquant.getVitalite() + " vitalité) ");
+        System.out.println("Joueur "+ attaquant.nJoueur+ " utilise "+ attaquant.getSortSpecial() + " et gagne " + gain + " en agilité.");
+        System.out.print("Joueur "+ attaquant.nJoueur + " (" + attaquant.vitalite + " vitalité) ");
         this.annoncerSiPerte(attaquant, adversaire);
     }
 }

@@ -6,7 +6,7 @@ public class Mage extends Personnage {
     public Mage(int nJoueur, int niveau, int force, int agilite, int intelligence){
         super(nJoueur, niveau, force, agilite, intelligence);
 
-        System.out.println("Abracadabra je suis le Mage. Joueur "+ nJoueur + ", niveau " + niveau  + " , je possède " + this.getVitalite()+
+        System.out.println("Abracadabra je suis le Mage. Joueur "+ nJoueur + ", niveau " + niveau  + " , je possède " + vitalite+
                 " de vitalité, "+ force + " de force, " + agilite + " d'agilité, et " + intelligence + " d'intelligence !");
     }
 
@@ -36,11 +36,11 @@ public class Mage extends Personnage {
     @Override
     public void envoyerAttaqueBasique(Personnage attaquant, Personnage adversaire) {
         //Adversaire perd sur sa vitalité les points égaux à l'intelligence du joueur.
-        int newVitalite = adversaire.getVitalite() - attaquant.getIntelligence();
+        int newVitalite = adversaire.vitalite - attaquant.intelligence;
         adversaire.setVitalite(newVitalite);
 
-        System.out.println("Joueur "+ attaquant.getNJoueur() + " utilise "+ attaquant.getSortBasique() + " et inflige " + attaquant.getIntelligence() + " dommages.");
-        System.out.println("Joueur "+ adversaire.getNJoueur() + " perd " + attaquant.getIntelligence() + " points de vie");
+        System.out.println("Joueur "+ attaquant.nJoueur + " utilise "+ attaquant.getSortBasique() + " et inflige " + attaquant.intelligence+ " dommages.");
+        System.out.println("Joueur "+ adversaire.nJoueur+ " perd " + attaquant.intelligence + " points de vie");
         this.annoncerSiPerte(attaquant, adversaire);
     }
 

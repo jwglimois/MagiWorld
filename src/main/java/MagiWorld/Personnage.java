@@ -2,12 +2,12 @@ package MagiWorld;
 
 public abstract class Personnage {
 
-    private int nJoueur;
-    private int niveau;
-    private int force;
-    private int agilite;
-    private int intelligence;
-    private int vitalite;
+    protected int nJoueur;
+    protected int niveau;
+    protected int force;
+    protected int agilite;
+    protected int intelligence;
+    protected int vitalite;
 
 
     public int getNJoueur() { return nJoueur; }
