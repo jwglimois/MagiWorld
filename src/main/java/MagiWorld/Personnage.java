@@ -1,5 +1,9 @@
 package MagiWorld;
 
+/**
+ * Il s'agit de la classe mère de 3 personnages : Guerrier, Rodeur, Mage.
+ * C'est une classe abstraite.
+ */
 public abstract class Personnage {
 
     protected int nJoueur;
@@ -23,20 +27,18 @@ public abstract class Personnage {
 
 
     /**
-     * La fonction abstraite getSortBasique() permettant aux classes dérivées de récupérer le nom de leur sort basique
+     * La fonction abstraite getSortBasique() permet aux classes dérivées de récupérer le nom de leur sort basique
      * @return la valeur de retour est un String qui représente le nom du sort basique
      */
     public abstract String getSortBasique();
 
     /**
-     * La fonction abstraite getSortSpecial() permettant aux classes dérivées de récupérer le nom de leur sort spéciale
+     * La fonction abstraite getSortSpecial() permet aux classes dérivées de récupérer le nom de leur sort spéciale
      * @return la valeur de retour est un String qui représente le nom du sort spéciale
      */
     public abstract String getSortSpecial();
 
-    /**
-     * Constructeur par défault
-     */
+
     public Personnage(){}
 
     /**
@@ -60,17 +62,17 @@ public abstract class Personnage {
     }
 
     /**
-     * La fonction abstraite envoyerAttaqueBasique() permettant aux classes dérivées de préciser les détails de la fonction
+     * La fonction abstraite envoyerAttaqueBasique() permet aux classes dérivées de préciser les détails de la fonction
      */
     public abstract void envoyerAttaqueBasique(Personnage attaquant, Personnage adversaire);
 
     /**
-     * La fonction abstraite envoyerAttaqueSpecial() permettant aux classes dérivées de préciser les détails de la fonction
+     * La fonction abstraite envoyerAttaqueSpecial() permet aux classes dérivées de préciser les détails de la fonction
      */
     public abstract void envoyerAttaqueSpeciale(Personnage attaquant, Personnage adversaire);
 
     /**
-     * annocerSiPerte permet d'informer l'utilisateur quel jouer a perdu
+     * La fonction 'annocerSiPerte()' permet d'informer l'utilisateur quel jouer a perdu
      * @param attaquant La 1ère valeur d'entrée est un objet de type Personnage qui représente l'attaquant
      * @param adversaire La 2ère valeur d'entrée est un objet de type Personnage qui représente l'adversaire
      */

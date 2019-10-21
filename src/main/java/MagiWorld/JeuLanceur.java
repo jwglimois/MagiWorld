@@ -2,6 +2,9 @@ package MagiWorld;
 
 import java.util.*;
 
+/**
+ * Il s'agit d'une classe pour lancer le jeu
+ */
 public class JeuLanceur {
 
     private SaisieVerificateur saisieVerificateur = new SaisieVerificateur(System.in, System.out);
@@ -13,7 +16,7 @@ public class JeuLanceur {
     List<Personnage> tab2Joueurs = new ArrayList<>();
 
     /**
-     * creerPersonnages() sert mettre les choix de Personnage dans le tableau tab2Joueurs
+     * creerPersonnages() sert à mettre les choix de Personnage dans le tableau tab2Joueurs
      * @return La valeur de retour est le tableau tab2Joueurs qui comprendra 2 objets de la class Personnage: joueur et son adversaire
      */
     public List<Personnage> creerPersonnages(){
@@ -32,7 +35,7 @@ public class JeuLanceur {
 
 
     /**
-     * choisirPersonnage() sert à selectionner le personnage.
+     * choisirPersonnage() sert à sélectionner le personnage.
      * @return La valeur de retour est un nombre entier qui représente le choix du personnage.
      */
     public int choisirPersonnage(){
@@ -52,7 +55,7 @@ public class JeuLanceur {
     }
 
     /**
-     * choisirCaracteristiques() sert à selectionner les caracteristiques du personnage
+     * choisirCaracteristiques() sert à sélectionner les caracteristiques du personnage
      * @param choixPersonnage La 1ère valeur d'entrée est un nombre entier qui représente le choix du personnage
      * @param nJoueur La 2ère valeur d'entrée est un nombre entier qui représente le numéro du joueur
      * @return On retourne un objet de type Personnage qui comprend tous les caractérisques dans ses attributs
@@ -106,7 +109,7 @@ public class JeuLanceur {
     }
 
     /**
-     * controllerValeurCaracteristique() sert à controller les valeurs saisies par l'utilisateur
+     * controllerValeurCaracteristique() sert à contrôler les valeurs saisies par l'utilisateur
      * @param choixNiveau La 1ère valeur d'entrée est un nombre entier qui représente le choix du Niveau
      * @param choixForce La 2ère valeur d'entrée est un nombre entier qui représente le choix de la Force
      * @param choixAgilite La 3ère valeur d'entrée est un nombre entier qui représente le choix de l'agilité
@@ -135,9 +138,9 @@ public class JeuLanceur {
 
 
     /**
-     * choisirUneAction() permet à l'utilisateur de selectionner une action
+     * choisirActions() permet à l'utilisateur de sélectionner des actions pour chaque joueur
      */
-    public void choisirUneAction(){
+    public void choisirActions(){
         tab2Joueurs = this.creerPersonnages();
         Personnage joueurActuel = null;
         Personnage joueurSuivant = null;
@@ -165,7 +168,7 @@ public class JeuLanceur {
 
 
     /**
-     * afficherActions() permet d'afficher les actions selectionnées
+     * afficherActions() permet d'afficher les actions sélectionnées
      * @param attaquant la 1ère valeur d'entrée est un objet de type Personnage qui représente l'attaquant
      * @param adversaire la 2ère valeur d'entrée est un objet de type Personnage qui représente l'adversaire
      */

@@ -1,5 +1,8 @@
 package MagiWorld;
 
+/**
+ * Il s'agit d'une classe dérivée de la classe Personnage
+ */
 public class Mage extends Personnage {
 
     public Mage(){super();}
@@ -11,7 +14,7 @@ public class Mage extends Personnage {
     }
 
     /**
-     * La fonction abstraite getSortBasique() est héritée depuis la classe mère. Je redéfinit dans cette fonction le string de retour
+     * La fonction abstraite getSortBasique() est héritée de la classe mère. Je redéfinis dans cette fonction le string de retour
      * @return La valeur de retour est un String qui représente le sort basique de Mage
      */
     @Override
@@ -20,7 +23,7 @@ public class Mage extends Personnage {
     }
 
     /**
-     * La fonction abstraite getSortSpecial() est héritée depuis la classe mère. Je redéfinit dans cette fonction le string de retour
+     * La fonction abstraite getSortSpecial() est héritée de la classe mère. Je redéfinis dans cette fonction le string de retour
      * @return La valeur de retour est un String qui représente le sort special de Mage
      */
     @Override
@@ -29,7 +32,7 @@ public class Mage extends Personnage {
     }
 
     /**
-     * envoyerAttaqueBasique permet d'afficher les impacts sur les personnage après l'envoi de l'attaque basique
+     * envoyerAttaqueBasique permet d'afficher les impacts sur les personnages après l'envoi de l'attaque basique
      * @param attaquant La valeur d'entrée est un objet du type Personnage qui représente l'attaquant
      * @param adversaire La valeur d'entrée est un objet du type Personnage qui représente l'adversaire
      */
@@ -45,7 +48,7 @@ public class Mage extends Personnage {
     }
 
     /**
-     * envoyerAttaqueSpeciale permet d'afficher les impacts sur les personnage après l'envoi de l'attaque sepciale
+     * envoyerAttaqueSpeciale permet d'afficher les impacts sur les personnages après l'envoi de l'attaque sepciale
      * @param attaquant La valeur d'entrée est un objet du type Personnage qui représente l'attaquant
      * @param adversaire La valeur d'entrée est un objet du type Personnage qui représente l'adversaire
      */

@@ -1,5 +1,8 @@
 package MagiWorld;
 
+/**
+ * Il s'agit d'une classe dérivée de la classe Personnage
+ */
 public class Rodeur extends Personnage {
 
     public Rodeur(){super();}
@@ -11,7 +14,7 @@ public class Rodeur extends Personnage {
     }
 
     /**
-     * La fonction abstraite getSortBasique() est héritée depuis la classe mère. Je redéfinit dans cette fonction le string de retour
+     * La fonction abstraite getSortBasique() est héritée de la classe mère. Je redéfinis dans cette fonction le string de retour
      * @return La valeur de retour est un String qui représente le sort basique de Rôdeur
      */
     @Override
@@ -20,7 +23,7 @@ public class Rodeur extends Personnage {
     }
 
     /**
-     * La fonction abstraite getSortSpecial() est héritée depuis la classe mère. Je redéfinit dans cette fonction le string de retour
+     * La fonction abstraite getSortSpecial() est héritée de la classe mère. Je redéfinis dans cette fonction le string de retour
      * @return La valeur de retour est un String qui représente le sort special de Rôdeur
      */
     @Override
@@ -29,7 +32,7 @@ public class Rodeur extends Personnage {
     }
 
     /**
-     * envoyerAttaqueBasique permet d'afficher les impacts sur les personnage après l'envoi de l'attaque basique
+     * envoyerAttaqueBasique permet d'afficher les impacts sur les personnages après l'envoi de l'attaque basique
      * @param attaquant La valeur d'entrée est un objet du type Personnage qui représente l'attaquant
      * @param adversaire La valeur d'entrée est un objet du type Personnage qui représente l'adversaire
      */
@@ -44,7 +47,7 @@ public class Rodeur extends Personnage {
     }
 
     /**
-     * envoyerAttaqueSpeciale permet d'afficher les impacts sur les personnage après l'envoi de l'attaque sepciale
+     * envoyerAttaqueSpeciale permet d'afficher les impacts sur les personnages après l'envoi de l'attaque sepciale
      * @param attaquant La valeur d'entrée est un objet du type Personnage qui représente l'attaquant
      * @param adversaire La valeur d'entrée est un objet du type Personnage qui représente l'adversaire
      */
@@ -55,7 +58,7 @@ public class Rodeur extends Personnage {
         int newAgilite = gain + attaquant.agilite;
         attaquant.setAgilite(newAgilite);
 
-        //Comme niveau = force + agilité + intelligence. Il faudrait augmenter le niveau aussi.
+        //Comme niveau = force + agilité + intelligence, il faudrait augmenter le niveau aussi.
         int newNiveau =  gain + attaquant.niveau;
         attaquant.setNiveau(newNiveau);
 

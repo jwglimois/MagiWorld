@@ -6,6 +6,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GuerrierTest {
 
+    /**
+     * Un test sur la vie restante d'un guerrier lorsqu'il a reçu un attaque basique d'un autre guerrier.
+     */
     @Test
     void Given_GuerrierNiveau10_WhenEnvoyerAttaqueBasique_ThenAfficherDommageAdversaire() {
         Guerrier attaquant = new Guerrier(1,10,10,0,0);
@@ -14,6 +17,9 @@ class GuerrierTest {
         assertEquals(50-10, adversaire.getVitalite());
     }
 
+    /**
+     * Un test sur la vie restante d'un guerrier lorsqu'il a reçu un attaque spéciale d'un autre guerrier.
+     */
     @Test
     void Given_GuerrierNiveau10_WhenEnvoyerAttaqueSpeciale_ThenAfficherDommageAdversaire() {
         //Adversaire perd sur sa vitalité les points = (force du joueur x 2).
@@ -23,6 +29,9 @@ class GuerrierTest {
         assertEquals(50-10*2, adversaire.getVitalite());
     }
 
+    /**
+     * Un test sur la vie restante d'un guerrier lorsqu'il a envoyé un attaque spéciale à un autre guerrier.
+     */
     @Test
     void Given_GuerrierNiveau10_WhenEnvoyerAttaqueSpeciale_ThenAfficherDommageAttaquant() {
         //Attaquant perd sur sa vitalité les points = (sa force / 2).

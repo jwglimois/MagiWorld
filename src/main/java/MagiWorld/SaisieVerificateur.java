@@ -4,16 +4,13 @@ import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
 
+/**
+ * La classe SaisieVerificateur permet d'assurer que la saisie de l'utilisateur est bien un nombre entier.
+ */
 public class SaisieVerificateur {
 
-    /**
-     * Déclaration d'un constant 'saisie' du type Scanner
-     */
-    private final Scanner saisie;
 
-    /**
-     * Déclaration d'un constant 'saisie' du type PrintStream
-     */
+    private final Scanner saisie;
     private final PrintStream dataSortie;
 
     /**
@@ -27,7 +24,7 @@ public class SaisieVerificateur {
     }
 
     /**
-     * saisirUnNb() permet de controller la saisie de l'utilisateur pour assurer que la saisie soit un nombre entier
+     * saisirUnNb() permet de contrôler la saisie de l'utilisateur pour assurer que la saisie soit un nombre entier
      * @param question La valeur d'entrée est un String qui indiquer à l'utilisateur la consign de saisir
      * @return la Valeur de retour est un nombre entier qui représente la saisie de l'utilisateur, bien validé par cette fonction
      */

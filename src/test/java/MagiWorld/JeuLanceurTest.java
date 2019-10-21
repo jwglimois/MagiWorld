@@ -83,7 +83,7 @@ class JeuLanceurTest {
     }
 
     /**
-     * Utilisation de l'objet Mock pour simuler la classe JeuLanceur qui vérifie la saisie de l'utilisateur de la fonction controllerValeurCaracteristique(()
+     * Utilisation de l'objet Mock pour simuler la classe JeuLanceur qui vérifie la saisie de l'utilisateur de la fonction controllerValeurCaracteristique()
      */
     @Test
     void Given_InputValues_WhenCheckIfValuesEnterInRange_ThenGetTrue() {
@@ -102,6 +102,9 @@ class JeuLanceurTest {
     }
 
 
+    /**
+     * Utilisation de l'objet Mock pour simuler la classe JeuLanceur qui vérifie la saisie de l'utilisateur de la fonction creerPersonnages()
+     */
     @org.junit.jupiter.api.Test
     void Given_informationOfPersonage_WhenCreatePersonage_Then2PersonageInTable() {
 
@@ -113,13 +116,20 @@ class JeuLanceurTest {
         tab2Personage.add(mage);
         when(jl.creerPersonnages()).thenReturn(tab2Personage);
         assertEquals(tab2Personage, testMock_creerPersonnages(jl));
-
     }
 
+    /**
+     * testMock_creerPersonnages() est utilisé par l'objet mock de la fonction 'Given_informationOfPersonage_WhenCreatePersonage_Then2PersonageInTable()'
+     * @param jl
+     * @return
+     */
     public List<Personnage> testMock_creerPersonnages(JeuLanceur jl){
         return jl.creerPersonnages();
     }
 
+    /**
+     * Utilisation d'un objet ByteArrayInputStream pour simuler la saisie de l'utilisateur (input = 1) qui permet d'afficher l'impact de l'attaqueBasique sur le personnage Mage
+     */
     @org.junit.jupiter.api.Test
     void Given_2personages_WhenFlighting_ThenDisplayResultAction() {
         System.setIn(new ByteArrayInputStream(String.format("1%n").getBytes()));
