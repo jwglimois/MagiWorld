@@ -35,7 +35,7 @@ To run a Java program in your Command Prompt, first, you need to have JDK (Java 
 
 Secondly, you need to configure your environment variable so that Command Prompt can find where JDK has been installed. You can refer to this web page for the configuration: https://javatutorial.net/set-java-home-windows-10 
 
-Thirdly, please install an IDE such as IntelliJ or Eclipse.
+Thirdly, please install an IDE such as IntelliJ and Eclipse.
 
 Finally, for the quality of the game, we strongly recommend that you run the game with Windows 8 or 10. 
 
